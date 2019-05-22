@@ -1,8 +1,10 @@
 {
-  "name": "reactrobofriendsredux",
+  "name": "deployrobofriendsredux",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ralonsodeniz.github.io/deployrobofriendsredux",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
@@ -13,7 +15,9 @@
     "tachyons": "^4.11.1"
   },
   "scripts": {
-    "start": "env BROWSER='C:\\Program Files (x86)\\Google\\Chrome\\Application\\Google Chrome' react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
